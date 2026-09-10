@@ -1,0 +1,79 @@
+{
+  "id": "fourbar_straightline",
+  "ground": "ground",
+  "links": [
+    {
+      "id": "ground",
+      "kind": "ground"
+    },
+    {
+      "id": "crank"
+    },
+    {
+      "id": "coupler"
+    },
+    {
+      "id": "rocker"
+    }
+  ],
+  "joints": [
+    {
+      "id": "A",
+      "type": "revolute",
+      "links": [
+        "ground",
+        "crank"
+      ],
+      "position": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "B",
+      "type": "revolute",
+      "links": [
+        "crank",
+        "coupler"
+      ]
+    },
+    {
+      "id": "C",
+      "type": "revolute",
+      "links": [
+        "coupler",
+        "rocker"
+      ]
+    },
+    {
+      "id": "D",
+      "type": "revolute",
+      "links": [
+        "rocker",
+        "ground"
+      ],
+      "position": [
+        4.950549309321024,
+        0.0
+      ]
+    }
+  ],
+  "dimensions": {
+    "crank": 1.1347782525462093,
+    "coupler": 3.160943418665774,
+    "rocker": 4.358600666914292
+  },
+  "coupler_point": {
+    "link": "coupler",
+    "p": 3.3079852698061836,
+    "phi": 0.24293460631440356
+  },
+  "driver": {
+    "joint": "A",
+    "link": "crank",
+    "start": 0.0,
+    "span": 360.0,
+    "steps": 720,
+    "branch": 1
+  }
+}

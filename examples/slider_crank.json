@@ -1,0 +1,23 @@
+{
+  "id": "slider_crank",
+  "ground": "ground",
+  "links": [
+    {"id": "ground", "kind": "ground"},
+    {"id": "crank", "pose": [0.0, 0.0, 1.5707963268]},
+    {"id": "coupler", "pose": [0.0, 1.0, -0.4115168461]},
+    {"id": "slider", "pose": [2.2912878475, 0.0, 0.0]}
+  ],
+  "joints": [
+    {"id": "A", "type": "revolute", "links": ["ground", "crank"],
+     "anchors": {"ground": [0.0, 0.0], "crank": [0.0, 0.0]}},
+    {"id": "B", "type": "revolute", "links": ["crank", "coupler"],
+     "anchors": {"crank": [1.0, 0.0], "coupler": [0.0, 0.0]}},
+    {"id": "C", "type": "revolute", "links": ["coupler", "slider"],
+     "anchors": {"coupler": [2.5, 0.0], "slider": [0.0, 0.0]}},
+    {"id": "D", "type": "prismatic", "links": ["ground", "slider"],
+     "anchors": {"ground": [0.0, 0.0], "slider": [0.0, 0.0]},
+     "axis": {"ground": [1.0, 0.0], "slider": [1.0, 0.0]}}
+  ],
+  "point_of_interest": {"link": "slider", "local": [0.0, 0.0]},
+  "driver": {"joint": "A", "start": 90.0, "span": 360.0, "steps": 721}
+}

@@ -1,0 +1,9 @@
+{
+  "id": "req_crank_rocker",
+  "driver_sweep": {"start": 0.0, "span": 360.0, "steps": 720, "branch": 1},
+  "constraints": [
+    {"type": "crank_rotatability", "hard": true},
+    {"type": "transmission_angle_min", "value": 30.0, "hard": true},
+    {"type": "straightness", "value": 0.08, "window_frac": 0.25, "hard": false, "weight": 0.5}
+  ]
+}

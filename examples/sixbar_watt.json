@@ -1,0 +1,215 @@
+{
+  "id": "sixbar_watt",
+  "links": [
+    {
+      "id": "ground",
+      "kind": "ground",
+      "pose": null
+    },
+    {
+      "id": "L1",
+      "kind": "binary",
+      "pose": [
+        0.0,
+        0.0,
+        0.7853981633974483
+      ]
+    },
+    {
+      "id": "L2",
+      "kind": "binary",
+      "pose": [
+        0.7071067811865476,
+        0.7071067811865476,
+        0.7994265972007149
+      ]
+    },
+    {
+      "id": "L3",
+      "kind": "binary",
+      "pose": [
+        2.4499016031362135,
+        2.499497979721464,
+        -1.5507556265863696
+      ]
+    },
+    {
+      "id": "L4",
+      "kind": "binary",
+      "pose": [
+        2.4799606412544852,
+        0.9997991918885856,
+        -1.5988951202884238
+      ]
+    },
+    {
+      "id": "L5",
+      "kind": "binary",
+      "pose": [
+        2.425243589979151,
+        -0.9469979208162473,
+        -2.218607251464913
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "id": "A",
+      "type": "revolute",
+      "links": [
+        "ground",
+        "L1"
+      ],
+      "position": null,
+      "anchors": {
+        "ground": [
+          0.0,
+          0.0
+        ],
+        "L1": [
+          0.0,
+          0.0
+        ]
+      },
+      "axis": null
+    },
+    {
+      "id": "D",
+      "type": "revolute",
+      "links": [
+        "ground",
+        "L3"
+      ],
+      "position": null,
+      "anchors": {
+        "ground": [
+          2.5,
+          0.0
+        ],
+        "L3": [
+          2.5,
+          6.245004513516506e-17
+        ]
+      },
+      "axis": null
+    },
+    {
+      "id": "G",
+      "type": "revolute",
+      "links": [
+        "ground",
+        "L5"
+      ],
+      "position": null,
+      "anchors": {
+        "ground": [
+          1.25,
+          -2.5
+        ],
+        "L5": [
+          1.947565904850499,
+          0.0
+        ]
+      },
+      "axis": null
+    },
+    {
+      "id": "B",
+      "type": "revolute",
+      "links": [
+        "L1",
+        "L2"
+      ],
+      "position": null,
+      "anchors": {
+        "L1": [
+          1.0000000000000002,
+          0.0
+        ],
+        "L2": [
+          0.0,
+          0.0
+        ]
+      },
+      "axis": null
+    },
+    {
+      "id": "C",
+      "type": "revolute",
+      "links": [
+        "L2",
+        "L3"
+      ],
+      "position": null,
+      "anchors": {
+        "L2": [
+          2.5,
+          2.220446049250313e-16
+        ],
+        "L3": [
+          0.0,
+          0.0
+        ]
+      },
+      "axis": null
+    },
+    {
+      "id": "E",
+      "type": "revolute",
+      "links": [
+        "L3",
+        "L4"
+      ],
+      "position": null,
+      "anchors": {
+        "L3": [
+          1.5,
+          -1.3877787807814457e-16
+        ],
+        "L4": [
+          0.0,
+          0.0
+        ]
+      },
+      "axis": null
+    },
+    {
+      "id": "F",
+      "type": "revolute",
+      "links": [
+        "L4",
+        "L5"
+      ],
+      "position": null,
+      "anchors": {
+        "L4": [
+          1.9475659048504987,
+          -2.0816681711721685e-17
+        ],
+        "L5": [
+          0.0,
+          0.0
+        ]
+      },
+      "axis": null
+    }
+  ],
+  "ground": "ground",
+  "dimensions": {},
+  "coupler_point": null,
+  "point_of_interest": {
+    "link": "L4",
+    "local": [
+      1.9475659048504985,
+      0.0
+    ]
+  },
+  "driver": {
+    "joint": "A",
+    "start": 45.0,
+    "span": 360.0,
+    "steps": 721,
+    "seed": 0
+  },
+  "meta": {}
+}

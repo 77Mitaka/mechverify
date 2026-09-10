@@ -1,0 +1,9 @@
+{
+  "id": "req_straightline",
+  "driver_sweep": {"start": 0.0, "span": 360.0, "steps": 720, "branch": 1},
+  "constraints": [
+    {"type": "crank_rotatability", "hard": true},
+    {"type": "transmission_angle_min", "value": 40.0, "hard": true},
+    {"type": "straightness", "value": 0.005, "window_frac": 0.3, "hard": true}
+  ]
+}

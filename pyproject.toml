@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mechverify"
+version = "0.4.0"
+description = "A verifiable modeling language and layered automatic verifier for planar mechanisms"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Author" }]
+keywords = ["planar mechanism", "mechanism synthesis", "Modelica", "PlanarMechanics", "verification"]
+dependencies = ["numpy", "scipy", "shapely"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+sim = ["OMPython", "fmpy"]
+
+[project.scripts]
+mechverify = "mechverify.cli:main"
+
+[tool.setuptools]
+packages = ["mechverify"]

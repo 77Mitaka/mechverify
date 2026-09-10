@@ -1,0 +1,8 @@
+{
+  "id": "req_sixbar",
+  "driver_sweep": {"start": 45.0, "span": 360.0, "steps": 721, "seed": 0},
+  "constraints": [
+    {"type": "crank_rotatability", "hard": true},
+    {"type": "singularity_margin_min", "value": 0.05, "hard": false, "weight": 1.0}
+  ]
+}

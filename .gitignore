@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# OpenModelica / generated build artifacts (keep generated *.mo)
+examples/generated/*
+!examples/generated/*.mo
+
+# regenerable corpus
+examples/corpus.sqlite
+examples/corpus.jsonl
+
+# LaTeX aux (keep paper.tex / paper.pdf)
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
