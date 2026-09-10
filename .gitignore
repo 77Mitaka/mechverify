@@ -6,15 +6,15 @@ __pycache__/
 build/
 dist/
 
-# OpenModelica / generated build artifacts (keep generated *.mo)
-examples/generated/*
-!examples/generated/*.mo
+# generated Modelica models (regenerable, not source)
+examples/generated/
 
 # regenerable corpus
 examples/corpus.sqlite
 examples/corpus.jsonl
 
-# LaTeX aux (keep paper.tex / paper.pdf)
+# paper sources / build (kept outside the code repository)
+paper/
 *.aux
 *.log
 *.out
